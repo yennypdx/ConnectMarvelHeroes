@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yennypurwanto.connectmarvelheros.MainActivity">
+
+    <com.example.yennypurwanto.connectmarvelheros.BoardView
+        android:id="@+id/board"
+        android:layout_width="396dp"
+        android:layout_height="396dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/newGame_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:text="Reset Game" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="348dp"
+        android:layout_height="65dp"
+        android:layout_alignEnd="@+id/newGame_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="-114dp"
+        android:layout_marginTop="16dp"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:text="How to play: Simply connect your hero from
+        side to side or surround your enemy to win." />
+
+
+</RelativeLayout>
