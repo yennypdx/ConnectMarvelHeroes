@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Gameboard {
 
-    private BoardTile[][] matrix;
+    protected BoardTile[][] matrix;
     private boolean endGame;
     private TileStatus currentPlayer;
     TileStatus P1, P2;
@@ -76,7 +76,7 @@ public class Gameboard {
         }
     }
 
-    public boolean validateMove(int x, int y){
+    public boolean validMove(int x, int y){
         boolean valid = false;
 
         if(matrix[x][y].getStatus().equals(TileStatus.BLANK)){
@@ -100,7 +100,7 @@ public class Gameboard {
 
     public void playGame(int x, int y){
         if(!endGame){
-            if (validateMove(x, y)) {
+            if (validMove(x, y)) {
                 matrix[x][y].changeStatus(currentPlayer);
 
                 ArrayList<Vertex> thisList = new ArrayList<>();
@@ -132,7 +132,7 @@ public class Gameboard {
         }
     }
 
-    public boolean checkWinGame(int x, int y){
+    public boolean checkWinGame(float x, float y){
         boolean win = false;
         ArrayList<Position> startPos = new ArrayList<>();
         ArrayList<Position> endPos = new ArrayList<>();

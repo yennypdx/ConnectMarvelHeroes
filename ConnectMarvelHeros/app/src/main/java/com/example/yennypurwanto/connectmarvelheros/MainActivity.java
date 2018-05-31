@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     private BoardView boardView;
     private Gameboard gameBoard;
+    public Button newgameButton;
+    public TileStatus statusBP, statusSW;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

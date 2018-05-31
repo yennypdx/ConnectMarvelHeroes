@@ -45,7 +45,7 @@ public class BoardTile {
         return outEquals;
     }
 
-    public void setPosition(int x, int y){
+    public void setPosition(float x, float y){
         position = new Position(x, y);
     }
 

@@ -12,70 +12,119 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.Random;
+
 public class BoardView extends View {
 
-    private static final int BORDER_THICKNESS = 2;
-    private static final int MATRIX_MARGIN = 5;
-    private static final int STROKE_WIDTH = 1;
-    private int width, height, matrixWidth, matrixHeight;
-    private Paint gridPaint;
+    //all cons
+    private static final Random RAND = new Random();
+    private static final int GRIDLINE_THICKNESS = 5;
+    private static final int BETWEENCELL_MARGIN = 15;
+    //all private props
+    private int width, height, cellWidth, cellHeight;
+    private Paint gridPaint, borderPaint;
     private Gameboard gameBoard;
     private MainActivity mainActivity;
-
+    //images props
     Bitmap bp_img = BitmapFactory.decodeResource(getResources(), R.drawable.bphanter_img);
     Bitmap sw_img = BitmapFactory.decodeResource(getResources(), R.drawable.scarletw_img);
 
     public BoardView(Context context){
         super(context);
+        initializeGame();
     }
 
     public BoardView(Context context, @Nullable AttributeSet attrs){
         super(context, attrs);
-        gridPaint = new Paint();
-        gameBoard = new Gameboard();
+        initializeGame();
     }
 
     public BoardView(Context context, @Nullable AttributeSet attrs, int defStyleAttrs){
         super(context, attrs, defStyleAttrs);
+        initializeGame();
     }
 
     public void setMainActivity(MainActivity main){
         mainActivity = main;
+    }
+    public void setGameBoard(Gameboard game){ gameBoard = game;}
+
+    private void initializeGame()
+    {
+        width = 1320;
+        height = 1320;
+        cellWidth = 143;
+        cellHeight = 143;
+        gridPaint = new Paint();
+        gridPaint.setAntiAlias(true);
+        borderPaint = new Paint();
+        borderPaint.setAntiAlias(true);
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         height = View.MeasureSpec.getSize(heightMeasureSpec);
         width = View.MeasureSpec.getSize(widthMeasureSpec);
-        matrixWidth = (width - BORDER_THICKNESS) / 11;
-        matrixHeight = (height - BORDER_THICKNESS) / 11;
+        cellWidth = width / 11 + 1;
+        cellHeight = height / 11 + 1;
 
         setMeasuredDimension(width, height);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        drawBorders(canvas);
-        drawTheImgBoard(canvas);
+        drawGrid(canvas);
+        //drawTheImgBoard(canvas);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (!gameBoard.isEndGame()  &&  event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
-            int x = (int) (event.getX() / matrixWidth);
-            int y = (int) (event.getY() / matrixHeight);
 
-            gameBoard.playGame(x, y);
+        int x = (int) (event.getX() / cellWidth);
+        int y = (int) (event.getY() / cellHeight);
+
+        if(gameBoard.isEndGame())
+        {
+            return false;
+        }
+
+        if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS)
+        {
+            if(!gameBoard.validMove(x, y)){
+                return false;
+            }
+            else
+            {
+                //set the coordinates
+                gameBoard.matrix[x][y].getPosition().xCoord =
+                        (float) cellWidth * ( x + 1) - cellWidth / 2;
+                gameBoard.matrix[x][y].getPosition().yCoord =
+                        (float) cellHeight * (x + 1) - cellHeight / 2;
+                gameBoard.matrix[x][y].deactivateTile();
+
+                //if the coordinates from user in within bound
+                if(gameBoard.matrix[x][y].getPosition().xCoord >= 0 &&
+                        gameBoard.matrix[x][y].getPosition().xCoord <=10 &&
+                        gameBoard.matrix[x][y].getPosition().yCoord >= 0 &&
+                        gameBoard.matrix[x][y].getPosition().yCoord <= 10)
+                {
+                   gameBoard.checkWinGame(x, y);
+                }
+
+                gameBoard.changePlayer();
+            }
+
             invalidate();
         }
-        return super.onTouchEvent(event);
+
+        return false;
     }
 
-    private void drawBorders(Canvas canvas) {
+    private void drawGrid(Canvas canvas) {
         for (int i = 0; i < 10; i++) {
             // vertical lines
-            float left = matrixWidth * (i + 1);
-            float right = left + BORDER_THICKNESS;
+            float left = cellWidth * (i + 1);
+            float right = left + GRIDLINE_THICKNESS;
             float top = 0;
             float bottom = height;
 
@@ -84,14 +133,15 @@ public class BoardView extends View {
             // horizontal lines
             float left2 = 0;
             float right2 = width;
-            float top2 = matrixHeight * (i + 1);
-            float bottom2 = top2 + BORDER_THICKNESS;
+            float top2 = cellHeight * (i + 1);
+            float bottom2 = top2 + GRIDLINE_THICKNESS;
 
             canvas.drawRect(left2, top2, right2, bottom2, gridPaint);
 
         }
     }
 
+    //TODO: how to draw the tiles to the screen??
     private void drawTheImgBoard(Canvas canvas){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -100,6 +150,7 @@ public class BoardView extends View {
         }
     }
 
+    //TODO: is this necessary?
     private void drawTheMatrix(Canvas canvas, BoardTile tile){
 
         for(int k = 0; k < 11; k+=2){

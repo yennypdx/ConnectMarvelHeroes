@@ -2,31 +2,31 @@ package com.example.yennypurwanto.connectmarvelheros;
 
 public class Position {
 
-    int xCoord, yCoord;
+    float xCoord, yCoord;
 
     public Position(){
         xCoord = 0;
         yCoord = 0;
     }
 
-    public Position(int x, int y){
+    public Position(float x, float y){
         xCoord = x;
         yCoord = y;
     }
 
-    public int getxCoord(){
+    public float getxCoord(){
         return xCoord;
     }
 
-    public int getyCoord(){
+    public float getyCoord(){
         return yCoord;
     }
 
-    public void setxCoord(int x){
+    public void setxCoord(float x){
         xCoord = x;
     }
 
-    public void setyCoord(int y){
+    public void setyCoord(float y){
         yCoord = y;
     }
 
