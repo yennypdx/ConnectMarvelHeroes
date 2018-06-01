@@ -32,33 +32,19 @@ public class MainActivity extends AppCompatActivity {
         boardView = findViewById(R.id.board);
         boardView.setMainActivity(this);
 
-        /*int childCount = gridLayout.getChildCount();
-        for(int i = 0; i < childCount; i++){
-            //gridLayout.getChildAt(i)
-            gridLayout.getChildAt(i).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //this is how to view each children
-                    int childIdx = gridLayout.indexOfChild(v);
-                    int x = childIdx / 11;
-                    int y = childIdx % 11;
-
-                    gameBoard.playGame(x, y);
-                    if(gameBoard.checkWinGame(x, y)){
-                        gameBoard.changePlayer();
-                        Toast.makeText(getApplicationContext(), "Next player turn!",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }*/
-
         final Button newGameButton = findViewById(R.id.newGame_button);
         newGameButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 newGame();
             }
         });
+
+        //TODO: initialize 57 buttons + its listeners
+
+
+
+
+
     }
 
     private void newGame() {

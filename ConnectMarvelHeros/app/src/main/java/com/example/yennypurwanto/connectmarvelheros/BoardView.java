@@ -25,9 +25,6 @@ public class BoardView extends View {
     private Paint gridPaint, borderPaint;
     private Gameboard gameBoard;
     private MainActivity mainActivity;
-    //images props
-    Bitmap bp_img = BitmapFactory.decodeResource(getResources(), R.drawable.bphanter_img);
-    Bitmap sw_img = BitmapFactory.decodeResource(getResources(), R.drawable.scarletw_img);
 
     public BoardView(Context context){
         super(context);
@@ -72,12 +69,6 @@ public class BoardView extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
-        drawGrid(canvas);
-        //drawTheImgBoard(canvas);
-    }
-
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
 
         int x = (int) (event.getX() / cellWidth);
@@ -108,19 +99,19 @@ public class BoardView extends View {
                         gameBoard.matrix[x][y].getPosition().yCoord >= 0 &&
                         gameBoard.matrix[x][y].getPosition().yCoord <= 10)
                 {
-                   gameBoard.checkWinGame(x, y);
-                }
+                   //TODO: IF current player is P1 (BP), then show BlackPanther img
+                    //TODO: ELSE IF show Scarlet img
 
+                }
                 gameBoard.changePlayer();
             }
 
             invalidate();
         }
-
         return false;
     }
 
-    private void drawGrid(Canvas canvas) {
+    /*private void drawGrid(Canvas canvas) {
         for (int i = 0; i < 10; i++) {
             // vertical lines
             float left = cellWidth * (i + 1);
@@ -141,18 +132,10 @@ public class BoardView extends View {
         }
     }
 
-    //TODO: how to draw the tiles to the screen??
-    private void drawTheImgBoard(Canvas canvas){
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                drawTheMatrix(canvas, gameBoard.getTile(i, j));
-            }
-        }
-    }
+    //TODO: draw the initial board
+    private void drawInitialMatrix(Canvas canvas, BoardTile tile){
 
-    //TODO: is this necessary?
-    private void drawTheMatrix(Canvas canvas, BoardTile tile){
-
+        //TODO: question if we can pull in boardSetup() here
         for(int k = 0; k < 11; k+=2){
             for(int l = 1; l < 10; l+=2){
                 //drawcBP
@@ -169,7 +152,7 @@ public class BoardView extends View {
             }
         }
 
-    }
+    }*/
 
 }
 

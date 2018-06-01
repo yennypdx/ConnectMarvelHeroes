@@ -8,33 +8,766 @@
     android:layout_height="match_parent"
     tools:context="com.example.yennypurwanto.connectmarvelheros.MainActivity">
 
-    <com.example.yennypurwanto.connectmarvelheros.BoardView
+    <android.support.v7.widget.GridLayout
         android:id="@+id/board"
-        android:layout_width="396dp"
-        android:layout_height="396dp"
-        android:layout_centerInParent="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="16dp"
+        app:columnCount="11"
+        app:rowCount="11">
+
+        //Odd Row[0] TOP LINE
+        <ImageButton
+            android:id="@+id/ib_00"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/corners" />
+
+        <ImageButton
+            android:id="@+id/ib_01"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_02"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_03"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_04"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_05"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_06"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_07"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_08"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_09"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_010"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/corners" />
+
+        //Even Row[1]
+        <ImageButton
+            android:id="@+id/ib_100"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_101"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_102"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_103"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_104"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_105"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_106"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_107"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_108"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_109"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_110"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        //Odd Row[2]
+        <ImageButton
+            android:id="@+id/ib_20"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_21"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_22"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_23"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_24"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_25"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_26"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_27"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_28"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_29"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_210"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        //Even Row[3]
+        <ImageButton
+            android:id="@+id/ib_30"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_31"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_32"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_33"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_34"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_35"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_36"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_37"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_38"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_39"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_310"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        //Odd Row[4]
+        <ImageButton
+            android:id="@+id/ib_40"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_41"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_42"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_43"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_44"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_45"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_46"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_47"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_48"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_49"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_410"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        //Even Row[5]
+        <ImageButton
+            android:id="@+id/ib_50"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_51"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_52"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_53"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_54"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_55"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_56"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_57"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_58"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_59"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_510"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        //Odd Row[6]
+        <ImageButton
+            android:id="@+id/ib_60"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_61"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_62"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_63"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_64"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_65"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_66"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_67"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_68"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_69"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_610"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        //Even Row[7]
+        <ImageButton
+            android:id="@+id/ib_70"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_71"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_72"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_73"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_74"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_75"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_76"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_77"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_78"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_79"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_710"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        //Odd Row[8]
+        <ImageButton
+            android:id="@+id/ib_80"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_81"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_82"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_83"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_84"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_85"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_86"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_87"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_88"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_89"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_810"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        //Even Row[9]
+        <ImageButton
+            android:id="@+id/ib_90"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_91"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_92"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_93"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_94"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_95"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_96"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_97"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_98"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        <ImageButton
+            android:id="@+id/ib_99"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_910"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/superman" />
+
+        //Odd Row[10]
+        <ImageButton
+            android:id="@+id/ib_1000"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/corners" />
+
+        <ImageButton
+            android:id="@+id/ib_1001"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_1002"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_1003"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_1004"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_1005"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_1006"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_1007"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_1008"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/whiteblank_img" />
+
+        <ImageButton
+            android:id="@+id/ib_1009"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/greenlantern" />
+
+        <ImageButton
+            android:id="@+id/ib_10010"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/corners" />
+
+    </android.support.v7.widget.GridLayout>
 
     <Button
         android:id="@+id/newGame_button"
-        android:layout_width="wrap_content"
+        android:layout_width="306dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:text="Reset Game" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="348dp"
-        android:layout_height="65dp"
-        android:layout_alignEnd="@+id/newGame_button"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="-114dp"
-        android:layout_marginTop="16dp"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:text="How to play: Simply connect your hero from
-        side to side or surround your enemy to win." />
+        android:layout_marginBottom="79dp"
+        android:text="Start New Game" />
 
 
 </RelativeLayout>

@@ -96,9 +96,7 @@ public class Gameboard {
         return valid;
     }
 
-
-
-    public void playGame(int x, int y){
+    public void makeMove(int x, int y){
         if(!endGame){
             if (validMove(x, y)) {
                 matrix[x][y].changeStatus(currentPlayer);
